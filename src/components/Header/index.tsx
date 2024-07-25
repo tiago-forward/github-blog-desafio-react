@@ -1,7 +1,11 @@
+import { HeaderContainer } from "./styles";
+
+import LogoImg from '../../assets/logo.svg'
+
 export function Header() {
     return (
-        <header>
-            <h1>Novo Projeto</h1>
-        </header>
+        <HeaderContainer>
+            <img src={LogoImg} width={148} height={98} alt="" />
+        </HeaderContainer>
     )
 }
