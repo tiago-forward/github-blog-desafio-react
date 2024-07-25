@@ -63,6 +63,7 @@ Serão abordados os conceitos abaixo para a resolução desse desafio:
 - ReactHookForm
 - Axios
 - Git
+- Styled-Components
 
 
 <!-- ## Instalando e executando o projeto
