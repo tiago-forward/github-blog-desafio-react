@@ -60,11 +60,11 @@ Serão abordados os conceitos abaixo para a resolução desse desafio:
 - JavaScript
 - TypeScript
 - React do Vite
-- ReactHookForm
+- React-Hook-Form
 - Axios
 - Git
 - Styled-Components
-
+- React-Router-Dom
 
 <!-- ## Instalando e executando o projeto
 
