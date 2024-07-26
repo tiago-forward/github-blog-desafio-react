@@ -1,11 +1,18 @@
 import { BlogContainer } from "./styles";
 
-import { Profile } from "../../components/Profile";
+import { ProfileCard } from "../../components/ProfileCard";
+import { SearchForm } from "./components";
 
 export function Blog() {
     return (
         <BlogContainer>
-            <Profile />
+            <ProfileCard />
+
+            <section>
+                <SearchForm>
+
+                </SearchForm>
+            </section>
         </BlogContainer>
     )
 }
