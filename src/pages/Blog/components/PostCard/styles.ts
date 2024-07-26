@@ -5,9 +5,15 @@ export const Container = styled.div`
     
     border-radius: 10px;
     padding: 2rem;
+    border: 2px solid transparent;
 
     overflow: hidden;
     text-overflow: ellipsis;
+
+    &:hover {
+        cursor: pointer;
+        border: 2px solid ${props => props.theme["base-label"]};
+    }
 
     header {
         display: flex;

@@ -1,6 +1,9 @@
 import { ProfileContainer, ProfileContent } from "./styles";
 
 import { Link } from "../Link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBuilding, faUserGroup } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export function ProfileCard() {
     return (
@@ -20,15 +23,15 @@ export function ProfileCard() {
                 <footer>
                     <ul className="info">
                         <li className="username">
-
-                            Cameronwll
+                            <FontAwesomeIcon icon={faGithub} className="icon" />
+                            cameronwll
                         </li>
                         <li className="username">
-
+                            <FontAwesomeIcon icon={faBuilding} className="icon" />
                             Rocketseat
                         </li>
                         <li className="username">
-
+                            <FontAwesomeIcon icon={faUserGroup} className="icon" />
                             32 seguidores
                         </li>
                     </ul>

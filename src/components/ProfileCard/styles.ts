@@ -52,6 +52,14 @@ export const ProfileContent = styled.div`
         .username {
             font-size: 1rem;
             color: ${props => props.theme['base-subtitle']};
+            
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            .icon {
+                color: ${props => props.theme['base-label']};
+            }
         }
     }
 `
