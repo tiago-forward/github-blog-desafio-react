@@ -20,5 +20,6 @@ export const GlobalStyle = createGlobalStyle`
 
     body, input, button {
         font: 400 1rem Nunito, sans-serif;
+        line-height: 30px;
     }
 `
