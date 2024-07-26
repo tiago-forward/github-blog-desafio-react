@@ -31,11 +31,12 @@ export const ProfileContent = styled.div`
         justify-content: space-between;
 
         .name {
-            font-size: 24px;
+            font-size: 1.5rem;
         }
     }
 
     main, .bio {
+        font-size: 1rem;
         color: ${props => props.theme['base-text']};
     }
 
@@ -49,6 +50,7 @@ export const ProfileContent = styled.div`
         gap: 1.5rem;
 
         .username {
+            font-size: 1rem;
             color: ${props => props.theme['base-subtitle']};
         }
     }
