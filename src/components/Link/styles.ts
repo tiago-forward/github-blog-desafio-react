@@ -11,6 +11,7 @@ export const LinkContainer = styled.a`
     font-weight: 700;
 
     color: ${(props) => props.theme.blue};
+    border-bottom: 1px solid transparent;
 
     &:hover {
         border-bottom: 1px solid ${(props) => props.theme.blue};

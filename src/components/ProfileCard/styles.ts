@@ -15,11 +15,14 @@ export const ProfileContainer = styled.section`
 
     .avatar {
         border-radius: 10px;
+        width: 9.25rem;
+        height: 9.25rem;
     }
 `
 
 export const ProfileContent = styled.div`
     padding: 2rem 2.5rem;
+    width: 100%;
 
     display: flex;
     flex-direction: column;
