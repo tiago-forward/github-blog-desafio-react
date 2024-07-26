@@ -12,11 +12,11 @@ export const SearchFormContainer = styled.form`
         align-items: center;
         justify-content: space-between;
 
-        h2 {
+        .title {
             font-size: 1.125rem;
         }
 
-        span {
+        .count-publication {
             font-size: 0.875rem;
             
             color: ${props => props.theme["base-span"]};

@@ -14,7 +14,7 @@ export const Container = styled.div`
         align-items: first baseline;
         justify-content: space-between;
 
-        h3 {
+        .title {
             max-width: 283px;
 
             font-size: 1.25rem;
@@ -26,7 +26,7 @@ export const Container = styled.div`
         }
     }
 
-    p {
+    .text {
         margin-top: 1.25rem;
         
         font-size: 1rem;
