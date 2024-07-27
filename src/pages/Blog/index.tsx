@@ -33,7 +33,7 @@ export function Blog() {
             <ProfileCard />
 
             <section>
-                <SearchForm />
+                <SearchForm amountOfPost={posts.length} />
 
                 <PostCardContainer>
                     {posts.map((post, index) => (
