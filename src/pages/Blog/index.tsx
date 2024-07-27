@@ -6,17 +6,23 @@ import { PostCard } from "./components/PostCard";
 import { useEffect, useState } from "react";
 import { api } from "../../lib/axios";
 
+export interface PostDataProps {
+    title: string
+    body: string
+    created_at: string
+    number: string
+}
+
 export function Blog() {
-    const [posts, setPosts] = useState([])
+    const [posts, setPosts] = useState<PostDataProps[]>([])
 
     async function fetchPosts(query?: string) {
         const response = await api.get(
-            `search/issues?q=${query}is:issue%20is:open%20repo:vilmarsitiodigital/github-blog`
+            `search/issues?q=%20repo:rocketseat-education/reactjs-github-blog-challenge`
         )
         setPosts(response.data.items)
         console.log(response.data.items)
     }
-
 
     useEffect(() => {
         fetchPosts()
@@ -30,12 +36,9 @@ export function Blog() {
                 <SearchForm />
 
                 <PostCardContainer>
-                    <PostCard />
-                    <PostCard />
-                    <PostCard />
-                    <PostCard />
-                    <PostCard />
-                    <PostCard />
+                    {posts.map((post, index) => (
+                        <PostCard key={index} post={post} />
+                    ))}
                 </PostCardContainer>
             </section>
         </BlogContainer>
