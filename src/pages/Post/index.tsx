@@ -40,9 +40,8 @@ export function Post() {
                 url: url,
                 body,
             })
-            console.log(response.data)
         } catch (error) {
-            console.error("Erro ao buscar dados do usuário:", error);
+            console.error("Erro ao buscar dados do post:", error);
         }
     }
 

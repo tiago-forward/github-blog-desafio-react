@@ -3,7 +3,9 @@ import { BlogContainer, PostCardContainer } from "./styles";
 import { ProfileCard } from "../../components/ProfileCard";
 import { SearchForm } from "./components/SearchForm";
 import { PostCard } from "./components/PostCard";
+
 import { useEffect, useState } from "react";
+
 import { api } from "../../lib/axios";
 
 export interface PostDataProps {
@@ -17,11 +19,14 @@ export function Blog() {
     const [posts, setPosts] = useState<PostDataProps[]>([])
 
     async function fetchPosts(query?: string) {
-        const response = await api.get(
-            `search/issues?q=%20repo:rocketseat-education/reactjs-github-blog-challenge`
-        )
-        setPosts(response.data.items)
-        console.log(response.data.items)
+        try {
+            const response = await api.get(
+                `search/issues?q=%20repo:rocketseat-education/reactjs-github-blog-challenge`
+            )
+            setPosts(response.data.items)
+        } catch (error) {
+            console.error("Erro ao buscar os posts:", error);
+        }
     }
 
     useEffect(() => {
