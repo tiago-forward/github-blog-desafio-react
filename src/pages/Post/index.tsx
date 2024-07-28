@@ -4,7 +4,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { Link } from "../../components/Link";
 import { useEffect, useState } from "react";
+
 import { api } from "../../lib/axios";
+import { formatDistanceToNow } from 'date-fns';
+import { ptBR } from "date-fns/locale";
 
 import { LinkReturn } from "./styles";
 import { Container, PostContainer, PostContent, PostInfoContent } from "./styles";
@@ -35,7 +38,10 @@ export function Post() {
             setPostInfo({
                 title,
                 comments,
-                createdAt,
+                createdAt: formatDistanceToNow(new Date(createdAt), {
+                    locale: ptBR,
+                    addSuffix: true,
+                }),
                 githubUsername: user.login,
                 url: url,
                 body,
