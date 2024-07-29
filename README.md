@@ -65,6 +65,8 @@ Serão abordados os conceitos abaixo para a resolução desse desafio:
 - Git
 - Styled-Components
 - React-Router-Dom
+- React-Hook-Form / @hookform resolvers
+- Zod
 
 <!-- ## Instalando e executando o projeto
 
