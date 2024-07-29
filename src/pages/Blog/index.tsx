@@ -18,10 +18,10 @@ export interface PostDataProps {
 export function Blog() {
     const [posts, setPosts] = useState<PostDataProps[]>([])
 
-    async function fetchPosts(query?: string) {
+    async function fetchPosts(query?: string | null) {
         try {
             const response = await api.get(
-                `search/issues?q=%20repo:rocketseat-education/reactjs-github-blog-challenge`
+                `search/issues?q=${query}%20repo:rocketseat-education/reactjs-github-blog-challenge`
             )
             setPosts(response.data.items)
         } catch (error) {
@@ -30,7 +30,7 @@ export function Blog() {
     }
 
     useEffect(() => {
-        fetchPosts()
+        fetchPosts('')
     }, [])
 
     return (
@@ -38,7 +38,7 @@ export function Blog() {
             <ProfileCard />
 
             <section>
-                <SearchForm amountOfPost={posts.length} />
+                <SearchForm amountOfPost={posts.length} onFetchPosts={fetchPosts} />
 
                 <PostCardContainer>
                     {posts.map((post, index) => (
