@@ -5,34 +5,32 @@
 <ul>
  <li><a href="#introdução">Introdução</a></li>
  <li><a href="#objetivo">Objetivo</a></li>
- <!-- <li><a href="#desafio">Desafio</a></li> -->
- <!-- <li><a href="#status">Status</a></li> -->
- <!-- <li><a href="#layout-do-projeto">Layoult do projeto</a></li> -->
+ <li><a href="#desafio">Desafio</a></li>
+ <li><a href="#status">Status</a></li>
+ <li><a href="#layout-do-projeto">Layoult do projeto</a></li>
  <li><a href="#curiosidade">Curiosidade</a></li>
  <li><a href="#tecnologias-e-bibliotecas-utilizadas">Tecnologias e bibliotecas</a></li>
- <!-- <li><a href="#instalando-e-executando-o-projeto">Instalação</a></li> -->
- <!-- <li><a href="#acessando-o-site">Acessando o site</a></li> -->
+ <li><a href="#instalando-e-executando-o-projeto">Instalação</a></li>
+ <li><a href="#acessando-o-site">Acessando o site</a></li>
 </ul>
 
 ## Introdução
 
-Esse desafio faz parte do curso da [Rocketseat](https://app.rocketseat.com.br/cart/rocketseat-one?referral=tiago-forward&coupon=indicamgm&utm_source=platform&utm_medium=organic&utm_campaign=venda&utm_term=mgm&utm_content=indication-lp_one), ele serve para nos desafiarmos e nos preparar para o mercado de trabalho. Irei resolver esse desafio e compartilhar minhas experiências.
+Esse desafio faz parte do curso da [Rocketseat](https://app.rocketseat.com.br/cart/rocketseat-one?referral=tiago-forward&coupon=indicamgm&utm_source=platform&utm_medium=organic&utm_campaign=venda&utm_term=mgm&utm_content=indication-lp_one), ele serve para nos desafiarmos e nos preparar para o mercado de trabalho. Irei resolver esse desafio e compartilhar minha experiência.
+
+<img src="./src/assets/Capa.png" alt="">
 
 ## Objetivo
 
 Desenvolver uma aplicação que utilizará da API do GitHub para buscar issues de um repositório, dados do seu perfil e exibir elas como um blog, onde haverá:
 
-    - Listagem do seu perfil com imagem, número de seguidores, nome e outras informações disponíveis pela API do GitHub; ❌
-    - Listar e filtrar todas as issues do repositório com um pequeno resumo do conteúdo dela; ❌
-    - Criar uma página para exibir um post (issue) completo; ❌
+    - Listagem do seu perfil com imagem, número de seguidores, nome e outras informações disponíveis pela API do GitHub; ✅
+    - Listar e filtrar todas as issues do repositório com um pequeno resumo do conteúdo dela; ✅
+    - Criar uma página para exibir um post (issue) completo; ✅
 
-<!-- ## Desafio
+## Desafio
 
-Durante o desenvolvimento desse projeto, meu maior desafio foi em acessar os dados e manipular o objeto, na qual foi criado um hook personalizado. Pude também praticar os métodos do JavaScript, e resolvendo o desafio mais rapidamente.
-
-Outro ponto importante e desafiador, estava em lidar com os erros de tipagem em meu código em alguns métodos do JavaScript e no estado do meu useTaskData, depois de muita pesquisa pude perceber que estava faltando eu atribuir uma melhor tipagem no meu hook de useTaskData. Foi declarado a minha função o valor do retorno do primeiro elemento `TaskProps` e o segundo elemento da minha função de atualizar o estado, com o `Dispatch` que serve para despachar ações, o tipo genérico do react, `SetStateAction` que pode ser um novo valor direito do estado ou uma função que recebe o valor atual do estado e retorna o novo valor do estado, e por fim, especificar que o estado em questão é uma array de `TraskProps`.
-
-<img src="./src/assets/ts-0.png" alt="">
+Durante o desenvolvimento desse projeto, pude reforçar em como utilizar o Axios para fazer as consultas da API do GitHub, onde foi realizado 3 tipos de busca, primeiro buscar os dados de usuário do perfil expondo na página principal, abaixo na mesma página, outra consulta a Api para exibir todas as issues do repositório, e por último, mais uma consulta, para expor em uma nova página os dados da issue que foi selecionada na primeira página.
 
 ## Status
 
@@ -40,8 +38,8 @@ Desafio concluído. 🥰
 
 ## Layout do projeto
 
-<img src="./src/assets/gif-layout-desktop.gif" alt="Gif do layout descktop">
-<img src="./src/assets/gif-layout-mobile.gif" alt="Gif do layout mobile"> -->
+<img src="./src/assets/github-blog-layout.gif" alt="Gif do layout descktop">
+<!-- <img src="" alt="Gif do layout mobile"> -->
 
 ## Curiosidade
 
@@ -62,24 +60,24 @@ Serão abordados os conceitos abaixo para a resolução desse desafio:
 - React do Vite
 - React-Hook-Form
 - Axios
-- Git
 - Styled-Components
 - React-Router-Dom
 - React-Hook-Form / @hookform resolvers
 - Zod
+- Git
 
-<!-- ## Instalando e executando o projeto
+## Instalando e executando o projeto
 
 1º - Clone o repositório do projeto em HTTPS ou SSH com sua SSH key;
 
 HTTPS
 ```bash
-  git clone https://github.com/tiago-forward/todo-list-desafio-react.git
+  git clone   git clone https://github.com/tiago-forward/todo-list-desafio-react.git
 ```
 
 SSH
 ```bash
-  git clone git@github.com:tiago-forward/todo-list-desafio-react.git
+  git clone git@github.com:tiago-forward/github-blog-desafio-react.git
 ```
 
 Em sua máquina, crie uma nova pasta e execute o git, e em seguida cole um dos links acima.
@@ -88,7 +86,7 @@ Em sua máquina, crie uma nova pasta e execute o git, e em seguida cole um dos l
 2º - Entre no diretório do projeto na qual foi clonado;
 
 ```bash
-  cd todo-list-desafio-react
+  cd github-blog-desafio-react
 ```
 
 3º - Execute o comando abaixo para instalar todas as dependências utilizadas;
@@ -105,4 +103,4 @@ Em sua máquina, crie uma nova pasta e execute o git, e em seguida cole um dos l
 
 ## Acessando o site
 
-Para acessar meu projeto online, acesse esse link : <a href="https://todo-list-desafio-react-8kd4.vercel.app/" target="_blank">Desafio React (Rocketseat) - ToDo List</a> -->
+Para acessar meu projeto online, acesse esse link : <a href="https://github-blog-desafio-react.vercel.app/" target="_blank">Desafio React (Rocketseat) - Github Blog</a>
