@@ -1,4 +1,4 @@
-import { Container } from "./styles";
+import { Container, LinkContainer } from "./styles";
 
 import { PostDataProps } from "../..";
 
@@ -10,22 +10,23 @@ interface PostCardProps {
 }
 
 export function PostCard({ post }: PostCardProps) {
-    const { title, body, created_at, number } = post
+    const { title, body, created_at: createdAt, number } = post
 
-    const createdAt = formatDistanceToNow(new Date(created_at), {
+    const formattedDate = formatDistanceToNow(new Date(createdAt), {
         locale: ptBR,
         addSuffix: true,
     })
 
     return (
-        <Container key={number}>
-            <header>
-                <h3 className="title">{title}</h3>
-                <span>{createdAt}</span>
-            </header>
-
-            <p className="text">{body}
-            </p>
+        <Container>
+            <LinkContainer to={`/post/${number}`}>
+                <header>
+                    <h3 className="title">{title}</h3>
+                    <span>{formattedDate}</span>
+                </header>
+                <p className="text">{body}
+                </p>
+            </LinkContainer>
         </Container>
     )
 }

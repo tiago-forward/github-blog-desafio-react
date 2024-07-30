@@ -1,17 +1,27 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
+
+export const LinkContainer = styled(NavLink)`
+    text-decoration: none;
+
+    color: ${props => props.theme["base-title"]};
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    display: block;
+`
 
 export const Container = styled.div`
     background-color: ${props => props.theme["base-post"]};
-    
+
+    height: 100%;
     border-radius: 10px;
-    padding: 2rem;
     border: 2px solid transparent;
 
     overflow: hidden;
     text-overflow: ellipsis;
 
     &:hover {
-        cursor: pointer;
         border: 2px solid ${props => props.theme["base-label"]};
     }
 

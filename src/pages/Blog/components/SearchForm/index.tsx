@@ -1,3 +1,4 @@
+import { zodResolver } from "@hookform/resolvers/zod";
 import { SearchFormContainer } from "./styles";
 
 import { useForm } from 'react-hook-form'
@@ -15,7 +16,9 @@ const searchFormSchema = zod.object({
 type SearchFormInput = zod.infer<typeof searchFormSchema>
 
 export function SearchForm({ amountOfPost, onFetchPosts }: SearchFormProps) {
-    const { register, handleSubmit } = useForm()
+    const { register, handleSubmit } = useForm<SearchFormInput>({
+        resolver: zodResolver(searchFormSchema)
+    })
 
     function handleSearchForPosts(data: SearchFormInput) {
         onFetchPosts(data.query)

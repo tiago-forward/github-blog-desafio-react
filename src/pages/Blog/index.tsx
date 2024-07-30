@@ -41,8 +41,8 @@ export function Blog() {
                 <SearchForm amountOfPost={posts.length} onFetchPosts={fetchPosts} />
 
                 <PostCardContainer>
-                    {posts.map((post, index) => (
-                        <PostCard key={index} post={post} />
+                    {posts.map((post) => (
+                        <PostCard key={post.number} post={post} />
                     ))}
                 </PostCardContainer>
             </section>

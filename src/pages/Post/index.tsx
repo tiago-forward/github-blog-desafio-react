@@ -11,6 +11,7 @@ import { ptBR } from "date-fns/locale";
 
 import { LinkReturn } from "./styles";
 import { Container, PostContainer, PostContent, PostInfoContent } from "./styles";
+import { useParams } from "react-router-dom";
 
 interface PostInfo {
     title: string
@@ -23,37 +24,38 @@ interface PostInfo {
 
 export function Post() {
     const [postInfo, setPostInfo] = useState<PostInfo | null>(null)
-
-    async function fetchPost() {
-        try {
-            const response = await api.get(`repos/rocketseat-education/reactjs-github-blog-challenge/issues/1 `)
-            const {
-                title,
-                comments,
-                created_at: createdAt,
-                user,
-                html_url: url,
-                body,
-            } = response.data
-            setPostInfo({
-                title,
-                comments,
-                createdAt: formatDistanceToNow(new Date(createdAt), {
-                    locale: ptBR,
-                    addSuffix: true,
-                }),
-                githubUsername: user.login,
-                url: url,
-                body,
-            })
-        } catch (error) {
-            console.error("Erro ao buscar dados do post:", error);
-        }
-    }
+    const { id } = useParams<{ id: string }>()
 
     useEffect(() => {
+        async function fetchPost() {
+            try {
+                const response = await api.get(`repos/rocketseat-education/reactjs-github-blog-challenge/issues/${id}`)
+                const {
+                    title,
+                    comments,
+                    created_at: createdAt,
+                    user,
+                    html_url: url,
+                    body,
+                } = response.data
+                setPostInfo({
+                    title,
+                    comments,
+                    createdAt: formatDistanceToNow(new Date(createdAt), {
+                        locale: ptBR,
+                        addSuffix: true,
+                    }),
+                    githubUsername: user.login,
+                    url: url,
+                    body,
+                })
+            } catch (error) {
+                console.error("Erro ao buscar dados do post:", error);
+            }
+        }
+
         fetchPost()
-    }, [])
+    }, [id])
 
     return (
         <Container>
